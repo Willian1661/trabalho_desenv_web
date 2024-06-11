@@ -35,9 +35,22 @@ botao_enviar_plano.addEventListener('click', () => {
         elementoIncorreto = true;
     }
 
-    const regex_numerico = /^[0-9]+$/;
+    /*  este bloco é para tratar caracteres indevidos nos respectivos inputs */
+    // const regexAlfabetico = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
+    // const regex_numerico = /^[0-9]+$/;
+    // document.querySelectorAll('.form-control').forEach((element) => {
+    //     if (element.value == '' || !regexAlfabetico.test(input_altura) || !regexAlfabetico.test(input_idade) || !regexAlfabetico.test(input_peso) || !regex_numerico.test(input_nome)) {
+    //         elementoIncorreto = true;
+    //     } else {
+    //         elementoIncorreto = false;
+    //     }
+
+    // })
+    /*  este bloco é para tratar caracteres indevidos nos respectivos inputs */
+
+
     document.querySelectorAll('.form-control').forEach((element) => {
-        if (element.value == '' || !regex_numerico.test(input_altura) || !regex_numerico.test(input_idade) || !regex_numerico.test(input_nome)) {
+        if (element.value == '') {
             elementoIncorreto = true;
         } else {
             elementoIncorreto = false;
